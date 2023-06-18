@@ -7,23 +7,25 @@
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+    <!-- Bootstrap ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- my CSS -->
     <link rel="stylesheet" href="./styles/style.css">
     <title>خانه - سیمرغ</title>
   </head>
   <body>
     <!-- start navbar section -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm">
         <div class="container">
           
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+              <img class="navbar-brand" src="./images/logo.png" width="80px"/>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <img class="navbar-brand" src="./images/logo.png" width="80px"/>
+            <div class="offcanvas-body offcanvas-body_custom">
+              <ul class="navbar-nav align-items-lg-center me-auto mb-2 mb-lg-0">
+                <img class="navbar-brand d-none d-lg-block" src="./images/logo.png" width="80px"/>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">خانه</a>
                 </li>
@@ -44,28 +46,144 @@
                   <a class="nav-link" href="#">تماس باما</a>
                 </li>
               </ul>
+              <!-- <div class="me-3">
+                <i class="bi bi-search nav-search_icon"></i><input type="text" class="nav-search_input" placeholder="جستوجو محصول...">
+              </div> -->
             </div>
           </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="btn btn-primary"><a  class="text-light text-decoration-none" href="#">ورود</a> | <a class="text-light text-decoration-none" href="#">ثبت نام</a></div>
-          
-         
+          <div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <img class="navbar-brand d-lg-none" src="./images/logo.png" width="80px"/>
+          </div>
+          <div class="d-flex">
+            <a href="#" class="nav-shoping_btn" data-bs-toggle="modal" data-bs-target="#searchIcon"><i class="bi bi-search nav-search_icon"></i></a>
+            <a href="#" class="nav-shoping_btn"><i class="bi bi-bag-check nav-shoping_icon"></i></a>
+            <a href="#" class="btn btn-outline-primary d-none d-md-block text-decoration-none" data-bs-toggle="modal" data-bs-target="#accountUserModal"> ورود | ثبت نام </a>
+            <a href="#" class="nav-account_user d-md-none" data-bs-toggle="modal" data-bs-target="#accountUserModal"><i class="bi bi-person-circle nav-account_user_icon"></i></a>
+          </div>
+  
         </div>
     </nav>
+    <!-- start signin and login modal -->
+    <div class="modal fade" id="accountUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header modal-header_custom">
+            <h6 class="modal-title p-0 m-0">وارد شوید</h6>
+          </div>
+          <div class="modal-body">
+            <div class="mb-2">
+              <label for="basic-url" class="form-label">تلفن <span class="text-danger">*</span></label>
+              <div class="input-group input-group-sm">
+                <span class="input-group-text" id="basic-addon3"><i class="bi bi-person-fill"></i></span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>
+              <div class="form-text text-danger d-none" id="">شماره تلفن الزامی هست.</div>
+            </div>
+            <div class="mb-4">
+              <label for="basic-url" class="form-label">رمز عبور <span class="text-danger">*</span></label>
+              <div class="input-group input-group-sm">
+                <span class="input-group-text" id="basic-addon3"><i class="bi bi-key-fill"></i></span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                <span class="input-group-text" id=""><i class="bi bi-eye-slash-fill"></i></span>
+                <!-- <i class="bi bi-eye-fill"></i> -->
+              </div>
+              <div class="form-text text-danger d-none" id="basic-addon4">رمز عبور الزامی هست.</div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">مرا به خاطر بسپار</label>
+              </div>
+              <a href="#" class="form_forget_password">فراموشی رمز عبور</a>
+            </div>
+          </div>
+          <div class="modal-footer modal-footer_custom">
+            <button type="button" class="btn btn-outline-danger">ثبت نام</button>
+            <button type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-left-circle fs-5"></i> ورود </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end signin and login modal -->
+    <!-- start search modal -->
+    <div class="modal fade" id="searchIcon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="p-3 border-bottom">
+            <label for="basic-url" class="form-label ">اسم محصول مورد نظر را وارد کنید.</label>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><i class="bi bi-search"></i></span>
+                <input type="search" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>
+              <div class="form-text text-danger d-none" id="">محصول مورد نظر یافت نشد!</div>
+          </div>
+          <div class="modal-body"> 
+              
+                <p>
+                  This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+                </p>
+                <p>
+                  This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+                </p>
+                <p>
+                  This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+                </p>
+                <p>
+                  This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+                </p>
+                <p>
+                  This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+                </p>
+                <p>
+                  This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+                </p>
+                <p>
+                  This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+                </p>
+              
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end search modal -->
     <!-- end navbar section -->
     <!-- start header section -->
-    <header>
+    <header class="header">
       <div class="container">
-        <div class="row">
-          <div>
-            <div class="row"><img src="" alt=""></div>
-            <div class="row"><img src="" alt=""></div>
-          </div>
-          <div>
-            <img src="" alt="">
-          </div>
+        <div class="row justify-content-around">
+      
+            <div class="col-12 col-md-6">
+              <div class="header-banners_right">
+                <div class="header-banners_right_one mb-5">
+                    <h3 class="header-banners_right_title_one">بشقاب های میناکاری با جدیدترین نقش و نگارها</h3>
+                    
+                      <img class="header-banners_right-image_one" src="./images/header-image/vessel2.png" alt="banner-image">
+                      <button class="btn header-banners_right_btn_one" type="button"> دیدن محصولات <i class="bi bi-arrow-left"></i> </button>
+                    
+                </div>
+                <div class="header-banners_right_two">
+                    <h3 class="header-banners_right_title_two">قلم زنی در طرح ها و رنگ های مختلف</h3>
+                    <div class="d-flex flex-row justify-content-between">
+                      <img class="header-banners_right-image_two" src="./images/header-image/vessel3.png" alt="banner-image">
+                      <button class="btn header-banners_right_btn_two mb-3" type="button"> دیدن محصولات <i class="bi bi-arrow-left"></i> </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-md-5 mt-5 mt-md-0">
+              <div class="header-banners_left">
+                <img class="header-banner_left_image md-3 mt-md-5"  src="./images/header-image/vessel1.png" alt="banner-image">
+                <h3 class="header-banner_left_title mt-3 mt-md-5">انواع ظروف مسی در انواع طرح و نقش ها</h3>
+                <button class="btn header-banner_left_btn mt-3 mt-md-5" type="button"> همین حالا ببین <i class="bi bi-arrow-left"></i> </button>
+              </div>
+            </div>
+            
         </div>
       </div>
     </header>
@@ -241,3 +359,9 @@
 
   </body>
 </html>
+
+<!-- 
+  <img src="./images/header-image/vessel2.png" alt="">
+<img src="./images/header-image/vessel3.png" alt="">
+<img src="./images/header-image/vessel1.png" alt="">
+ -->
