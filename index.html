@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- start navbar section -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="navbar">
         <div class="container">
           
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -154,6 +154,9 @@
     <!-- end navbar section -->
     <!-- start header section -->
     <header class="header">
+      <img src="./images/header-image/vessel-background.png" class="vessel_bg_right_top" alt="image" width="82px">
+      <img src="./images/header-image/vessel-background.png" class="vessel_bg_left_center" alt="image" width="82px">
+      <img src="./images/header-image/vessel-background.png" class="vessel_bg_center_bottom" alt="image" width="82px">
       <div class="container">
         <div class="row justify-content-around">
       
@@ -189,22 +192,28 @@
     </header>
   <!-- end header section -->   
     <!-- start discount section -->
-    <section>
+    <section class="discount-section">
       <div class="container">
         <div class="row">
-          <img src="" alt="">
-          <h2>تخفیف های این هفته</h2>
-          <img src="" alt="">
+          <div class="header-sections">
+            <img src="./images/traced-right.png" class="image-sections" alt="icon">
+            <h2 class="title-sections">تخفیف های این هفته</h2>
+            <img src="./images/traced-left.png" class="image-sections" alt="icon">
+          </div>
         </div>
         <div class="row">
           <div>
-            <span>20%</span>
-            <img src="" alt="">
-            <div></div>
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button type="button">افزودن به سبد خرید <i></i> </button>
+            <div class="card text-center h-6" style="width: 20rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary h-6">
+                  افزودن به سبد خرید
+                  <i class="bi bi-bag-check-fill"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
