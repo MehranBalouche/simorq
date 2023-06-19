@@ -298,6 +298,72 @@
 .discount-section{
   padding-top: 4rem;
 }
+.discount-card-section{
+ margin-top: 9rem;
+}
+.card_custom{
+  width: 19rem;
+  height: 21rem;
+  position: relative;
+  border-radius: 20px;
+  background-color: rgba(38,120,243,1);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(38,120,243,1) 50%);
+  padding: 1.5px 1px;
+  margin-bottom: 9rem;
+}
+.badge-discount{
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  color: #880000;
+  border: 1.7px solid #880000;
+  background: #ff9090;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-weight: 800;
+  padding: 0;
+}
+.card-image_background{
+  background-color: #f6f6f6;
+  width: 195px;
+  height: 213px;
+  border-radius: 50%;
+  margin: -7rem auto;
+  z-index: 99;
+}
+.card-img_custom{
+  width: auto;
+  height: 212px;
+  padding-bottom: 3rem;
+}
+.card-body_custom{
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 0;
+}
+.card-title_custom{
+  margin-top: 50%;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+}
+.card-discount{
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: rgb(128, 128, 128);
+}
+.card_price{
+  color: #2678F3;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+
 /* ---------Header------------ */
 /* ---------Header------------ */
 /* ---------Header------------ */
