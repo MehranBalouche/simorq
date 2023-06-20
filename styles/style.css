@@ -582,7 +582,7 @@ input:focus {
     rgba(38, 120, 243, 1) 83%,
     rgba(255, 255, 255, 0.9949405787705707) 100%
   );
-  margin-bottom: 2rem;
+  margin: 1rem;
 }
 .feature-card_body {
   display: flex;
