@@ -682,7 +682,7 @@ input:focus {
   color: #54649C;
   margin-bottom: 1rem;
 }
-.footer-conection_tell a:hover , .footer-conection_address a:hover{
+.footer-conection_tell a:hover , .footer-conection_address a:hover, .footer-group_list:hover{
   font-weight: 500;
   color: #002875;
 }
@@ -733,5 +733,34 @@ input:focus {
     flex-direction: column;
     align-items: flex-start;
     width: 280px;
+  }
 }
-/* ---------Header------------ */
+/* --------- scroll to up btn ------------ */
+.move-top{
+  width: 60px;
+  height: 60px;
+  background: rgb(38, 120, 243);
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.move-top_btn{
+  background-color: #f6f6f6;
+  font-weight: 800;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+}
+/* --------- scroll to up btn ------------ */
+/* --------- scroll to up btn ------------ */
+/* ---------scroll to up btn------------ */
+/* ---------scroll to up btn------------ */
