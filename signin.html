@@ -48,7 +48,7 @@
                 width="80px"
               />
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                <a class="nav-link active" aria-current="page" href="./contact-us.html">خانه</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -70,7 +70,7 @@
                 <a class="nav-link" href="#">معرفی هنرمند</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">تماس باما</a>
+                <a class="nav-link" href="./contact-us.html">تماس باما</a>
               </li>
             </ul>
             <!-- <div class="me-3">
@@ -314,9 +314,9 @@
 
     <section class="py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="form-header col-md-8">فرم ثبت نام</div>
-                <div class="form-contents col-md-8">
+            <div class="row flex-column justify-content-center align-items-center">
+                <div class="form-header col-md-8 col-lg-6">فرم ثبت نام</div>
+                <div class="form-contents col-md-8 col-lg-6">
                     <form class="row g-3 needs-validation py-3" novalidate>
                         <div class="mb-2">
                             <label for="basic-url" class="form-label">شماره تلفن: <span class="text-danger">*</span></label>
@@ -339,7 +339,9 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill text-primary"></i></span>
                                 <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
-                            </div> 
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-eye-slash-fill text-primary"></i></span>
+                                <!-- <i class="bi bi-eye-fill"></i> -->
+                              </div> 
                             <div class="invalid-feedback" >فیلد شماره تلفن همراه نمی تواند خالی باشد!</div>
                         </div>
                         <div class="mb-2">
@@ -347,6 +349,8 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill text-primary"></i></span>
                                 <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-eye-slash-fill text-primary"></i></span>
+                                <!-- <i class="bi bi-eye-fill"></i> -->
                             </div> 
                             <div class="invalid-feedback" >فیلد شماره تلفن همراه نمی تواند خالی باشد!</div>
                         </div>
@@ -382,9 +386,9 @@
                         </div>
 
                         <div class="mb-2 d-flex align-items-center justify-content-between">
-                            <button type="submit" class="btn btn-outline-danger">
-                                 ورود به حساب کاربری <i class="bi bi-arrow-left-circle fs-5"></i>
-                              </button>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#accountUserModal" class="text-decoration-none text-dark ps-3">
+                                 برای ورود به حساب کاربری خود<span class="text-primary fw-bold"> کلیک </span> کنید.
+                              </a>
                             <button class="btn btn-primary" type="submit">ثبت نام <i></i></button>
                         </div>
 
@@ -428,6 +432,11 @@
                 <div class="footer-conection_address">
                   <span>آدرس:</span>
                   <a class="text-decoration-none" href="#">تهران، ولیعصر</a>
+                </div>
+                <div class="footer-conection_socialmedia">
+                  <a href="#" class="text-decoration-none mx-2"><i class="bi bi-telegram"></i></a>
+                  <a href="#" class="text-decoration-none mx-2"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="text-decoration-none mx-2"><i class="bi bi-whatsapp"></i></a>
                 </div>
               </div>
             </section>

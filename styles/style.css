@@ -130,23 +130,18 @@ input:focus {
   color: #00000085;
 }
 .nav-account_user:hover {
-  border: 1px solid #acacac;
-  color: #000;
+  border: 1px solid #dc3545;
+  color: #dc3545;
 }
 .nav-account_user_icon {
   font-size: 1.2rem;
 }
 @media (max-width: 576px) {
-  .nav-account_user_icon {
+  .nav-account_user_icon,.nav-search_icon, .nav-shoping_icon {
     font-size: 0.9rem;
   }
-  .nav-search_icon {
-    font-size: 0.9rem;
-  }
-  .nav-shoping_icon {
-    font-size: 0.9rem;
-  }
-  .nav-shoping_btn {
+
+  .nav-shoping_btn, .nav-search_btn {
     margin-left: 0.4rem;
   }
 }
@@ -648,6 +643,17 @@ input:focus {
 .feature-card_title {
   color: #3c589f;
 }
+@media (max-width: 576px){
+  .feature-card {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    padding: 1px 1px 0 1px;
+    background: rgb(38, 120, 243);
+    background: linear-gradient( 180deg, rgba(38, 120, 243, 1) 83%, rgba(255, 255, 255, 0.9949405787705707) 100% );
+    margin: 1rem 0.5rem;
+}
+}
 /* ---------Footer------------ */
 .footer_background{
   background: #D8D9FF;
@@ -734,6 +740,46 @@ input:focus {
   color: #002875;
 }
 
+/* social media */
+.footer-conection_socialmedia{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+}
+.bi-instagram {
+  color: #bc1888;
+}
+.bi-instagram:hover {
+  color: #9c1872;
+}
+.bi-telegram {
+  color: #0088cc;
+}
+.bi-telegram:hover {
+  color: #0370a7;
+}
+.bi-whatsapp {
+  color: #128c7e;
+}
+.bi-whatsapp:hover {
+  color: #0d7266;
+}
+.bi-twitter {
+  color: #00acee;
+}
+.bi-twitter:hover {
+  color: #0089be;
+}
+.bi-facebook {
+  color: #3b5998;
+}
+.bi-facebook:hover {
+  color: #324b80;
+}
+/* social media */
+
 .footer-howtrust{
   display: flex;
   flex-direction: column;
@@ -796,6 +842,7 @@ input:focus {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 999;
 }
 .move-top_btn{
   background-color: #f6f6f6;

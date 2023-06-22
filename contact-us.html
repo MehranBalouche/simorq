@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- my CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>خانه - سیمرغ</title>
+  </head>
+  <body class="bg-white">
+    <!-- start navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-custom shadow-sm bg-white">
+      <div class="container">
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <img class="navbar-brand" src="./images/logo.png" width="80px" />
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body offcanvas-body_custom">
+            <ul class="navbar-nav align-items-lg-center me-auto mb-2 mb-lg-0">
+              <img
+                class="navbar-brand d-none d-lg-block"
+                src="./images/logo.png"
+                width="80px"
+              />
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">خانه</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  محصولات
+                </a>
+                <ul class="dropdown-menu dropdown-menu-custom">
+                  <li><a class="dropdown-item" href="#">دسته 1</a></li>
+                  <li><a class="dropdown-item" href="#">دسته 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">معرفی هنرمند</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact-us.html">تماس باما</a>
+              </li>
+            </ul>
+            <!-- <div class="me-3">
+                <i class="bi bi-search nav-search_icon"></i><input type="text" class="nav-search_input" placeholder="جستوجو محصول...">
+              </div> -->
+          </div>
+        </div>
+        <div>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <img
+            class="navbar-brand d-lg-none"
+            src="./images/logo.png"
+            width="80px"
+          />
+        </div>
+        <div class="d-flex">
+          <a
+            href="#"
+            class="nav-search_btn"
+            data-bs-toggle="modal"
+            data-bs-target="#searchIcon"
+            ><i class="bi bi-search nav-search_icon"></i
+          ></a>
+          <a href="#" class="nav-shoping_btn"
+            ><i class="bi bi-bag-check nav-shoping_icon"></i
+          ></a>
+          <a
+            href="#"
+            class="btn btn-outline-primary d-none d-md-block text-decoration-none"
+            data-bs-toggle="modal"
+            data-bs-target="#accountUserModal"
+          >
+            ورود | ثبت نام
+          </a>
+          <a
+            href="#"
+            class="nav-account_user d-md-none"
+            data-bs-toggle="modal"
+            data-bs-target="#accountUserModal"
+            ><i class="bi bi-person-circle nav-account_user_icon"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+    <!-- start signin and login modal -->
+    <div
+      class="modal fade"
+      id="accountUserModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header modal-header_custom">
+            <h6 class="modal-title p-0 m-0">وارد شوید</h6>
+          </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="mb-2">
+                <label for="basic-url" class="form-label"
+                  >تلفن <span class="text-danger">*</span></label
+                >
+                <div class="input-group input-group-sm">
+                  <span class="input-group-text" id="basic-addon3"
+                    ><i class="bi bi-phone-fill text-primary"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="basic-url"
+                    aria-describedby="basic-addon3 basic-addon4"
+                  />
+                </div>
+                <div class="form-text text-danger d-none" id="">
+                  شماره تلفن الزامی هست.
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="basic-url" class="form-label"
+                  >رمز عبور <span class="text-danger">*</span></label
+                >
+                <div class="input-group input-group-sm">
+                  <span class="input-group-text" id="basic-addon3"
+                    ><i class="bi bi-key-fill text-primary"></i
+                  ></span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="basic-url"
+                    aria-describedby="basic-addon3 basic-addon4"
+                  />
+                  <span class="input-group-text" id=""
+                    ><i class="bi bi-eye-slash-fill text-primary"></i
+                  ></span>
+                  <!-- <i class="bi bi-eye-fill"></i> -->
+                </div>
+                <div class="form-text text-danger d-none" id="basic-addon4">
+                  رمز عبور الزامی هست.
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault"
+                    >مرا به خاطر بسپار</label
+                  >
+                </div>
+                <a href="#" class="form_forget_password">فراموشی رمز عبور</a>
+              </div>
+            </div>
+            <div class="modal-footer modal-footer_custom">
+              <a
+                href="./signin.html"
+                type="button"
+                class="btn btn-outline-danger"
+                >ثبت نام</a
+              >
+              <button type="submit" class="btn btn-primary">
+                ورود <i class="bi bi-arrow-left-circle fs-5"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end signin and login modal -->
+    <!-- start search modal -->
+    <div
+      class="modal fade"
+      id="searchIcon"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="p-3 border-bottom">
+            <label for="basic-url" class="form-label"
+              >اسم محصول مورد نظر را وارد کنید.</label
+            >
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3"
+                ><i class="bi bi-search"></i
+              ></span>
+              <input
+                type="search"
+                class="form-control"
+                id="basic-url"
+                aria-describedby="basic-addon3 basic-addon4"
+              />
+            </div>
+            <div class="form-text text-danger d-none" id="">
+              محصول مورد نظر یافت نشد!
+            </div>
+          </div>
+          <div class="modal-body modal-body-scrollbar">
+            <div
+              class="d-flex flex-column align-items-center justify-content-start flex-nowrap"
+            >
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image5.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image1.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image2.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image3.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image4.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image3.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image2.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image3.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image4.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+              <div class="card-search-result">
+                <img
+                  class="card-search-result_img"
+                  src="./images/newest/image3.png"
+                  alt="image"
+                />
+                <div class="card-search-result_contents">
+                  <h6 class="card-search-result_title">جاقلمی خاتم کاری</h6>
+                  <span class="card-search-result_designer_name"
+                    >طرح اصفهان</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end search modal -->
+    <!-- end navbar section -->
+
+    <div class="container mt-4">
+      <nav class="breadcrumb-custom" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a class="text-decoration-none text-dark" href="./index.html"
+              >فروشگاه سیمرغ</a
+            >
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            درباره ما و تماس باما
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row flex-column justify-content-center align-items-center">
+          <div class="form-header text-start fw-bold ps-3">درباره سیمرغ</div>
+          <div class="form-contents py-3">
+            <p class="text-dark fw-medium fs-6 my-2">به نام خالق هستی</p>
+            <p class="text-dark fw-medium fs-6 my-2">
+              از آنجایی که بسیاری از طراحان و برنامه نویسان برای تکمیل پروژه های
+              خود و نشان دادن طرح نکمیل شده نیاز به متن های تستی و آزمایشی
+              دارند، و از آنجایی که تایپ متن های آزمایشی می تواند زمان بسیار
+              زیادی از طراح بگیرد... و وقت ارزشمند این عزیزان را هدر بدهد، از
+              این رو متن های لورم ایپسوم ( Lorem ipsum ) خلق شد و یک متن جهانی و
+              سراسری است که فقط و فقط به منظور کمک به طراحان و برنامه نویسان
+              ایجاد شد... تا این عزیزان بتوانند با بهره گیری از این متن ها پروژه
+              خود را با سرعت بیشتری گسترش دهند و غدغه تولید متن را نداشته باشند.
+            </p>
+            <p class="text-dark fw-medium fs-6 my-2">
+              ما نیز در وب سایت "لورم ایپسوم فارسی" به نشانی
+              http://loremipsume.ir با عشق و علاقه بسیار و توصیف نشدنی سعی کرده
+              ایم با یک ابزار خیلی ساده و جمع و جور بتوانیم متن لورم ایپسوم را
+              در اختیار طراحان و برنامه نویسان قرار دهیم... و قدم هر چند کوچکی
+              در پیشرفت وب فارسی برداشته باشیم.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row flex-column justify-content-center align-items-center">
+          <div class="form-header text-start fw-bold ps-3">تماس با ما</div>
+          <div class="form-contents py-3">
+            <p class="text-dark fw-medium fs-6 my-2">
+              آدرس دفتر مرکزی ( لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم )
+            </p>
+            <p class="text-dark fw-medium fs-6 my-2">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <p class="text-dark fw-medium fs-6 my-2">
+              تلفن تماس 0123456789 و 0123456789
+            </p>
+            <p class="text-dark fw-medium fs-6 my-2">شماره فکس 0123456789</p>
+            <p class="text-dark fw-medium fs-6 my-2">صندوق پستی 123456-7894</p>
+            <p class="text-dark fw-medium fs-6 my-2">کد پستی 12348918</p>
+            <p class="text-dark fw-medium fs-6 my-2">
+              آدرس پست الکترونیکی info@simorq.ir
+            </p>
+            <p class="text-dark fw-medium fs-6 my-2">
+              آدرس سایت فروشگاهی www.simorq.ir
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- start footer section -->
+    <footer class="footer_background py-5">
+      <div class="container">
+        <div class="row">
+          <div
+            class="d-flex align-items-start justify-content-center justify-content-md-between flex-wrap"
+          >
+            <section class="footer-group">
+              <h3 class="footer_title">دسته بندی ها</h3>
+              <div class="footer-group-lists">
+                <a href="#" class="footer-group_list">قلم کاری</a>
+                <a href="#" class="footer-group_list">خاتم کاری</a>
+                <a href="#" class="footer-group_list">مینا کاری</a>
+                <a href="#" class="footer-group_list">ظروف سفالی</a>
+                <a href="#" class="footer-group_list">مس و پرداز</a>
+                <a href="#" class="footer-group_list">تابلو</a>
+                <a href="#" class="footer-group_list">فیروزه کوبی</a>
+                <a href="#" class="footer-group_list">کتیبه</a>
+              </div>
+            </section>
+
+            <section class="footer-conection">
+              <h3 class="footer-conection_title">ارتباط باما</h3>
+              <div class="footer-conection-contents">
+                <div class="footer-conection_tell">
+                  <span>تلفن تماس:</span>
+                  <a class="text-decoration-none" href="#">09123456789</a>
+                </div>
+                <div class="footer-conection_address">
+                  <span>آدرس:</span>
+                  <a class="text-decoration-none" href="#">تهران، ولیعصر</a>
+                </div>
+                <div class="footer-conection_socialmedia">
+                  <a href="#" class="text-decoration-none mx-2"><i class="bi bi-telegram"></i></a>
+                  <a href="#" class="text-decoration-none mx-2"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="text-decoration-none mx-2"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+            </section>
+
+            <section class="footer-howtrust">
+              <h3 class="footer-howtrust_title">اعتماد به سیمرغ</h3>
+              <div class="footer-howtrust-contents">
+                <img
+                  class="footer-howtrust_img"
+                  src="./images/certificates/enamad.png"
+                  alt="logo"
+                />
+                <img
+                  class="footer-howtrust_img"
+                  src="./images/certificates/etehadiye.png"
+                  alt="logo"
+                />
+                <img
+                  class="footer-howtrust_img"
+                  src="./images/certificates/samandehi.png"
+                  alt="logo"
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer section -->
+
+    <!-- JavaScript Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!--Custom JavaScript -->
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
