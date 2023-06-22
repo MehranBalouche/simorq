@@ -2,7 +2,7 @@
 let $ = document;
 let navbarElem = $.getElementById('navbar'); 
 let moveTopBtnElem = $.getElementById('moveTopBtn');
-console.log(moveTopBtnElem);
+moveTopBtnElem.style.display = 'none';
 
 moveTopBtnElem.addEventListener('click', backToTop);
 
@@ -18,7 +18,7 @@ function scrollFunction() {
     navbarElem.classList.remove('shadow-sm');
   }
 
-  if ($.body.scrollTop > 250 || $.documentElement.scrollTop > 250){
+  if ($.body.scrollTop > 600 || $.documentElement.scrollTop > 600){
     moveTopBtnElem.style.display = 'block';
   }else{
     moveTopBtnElem.style.display = 'none';
